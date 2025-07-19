@@ -32,11 +32,11 @@ function setup() {
   mainContainer.style("justify-content", "center");
   mainContainer.style("gap", "20px");
   
-  // Tạo container UI, đặt bên trái, cố định chiều cao 320px (theo mẫu code gốc)
+  // Tạo container UI, đặt bên trái, cố định chiều cao 450px (theo mẫu code gốc)
   uiContainer = createDiv();
   uiContainer.id("uiContainer");
-  uiContainer.style("width", "320px");
-  uiContainer.style("height", "400px");
+  uiContainer.style("width", "330px");
+  uiContainer.style("height", "420px");
   uiContainer.style("background-color", "#fff");
   uiContainer.style("padding", "10px");
   uiContainer.style("border-radius", "5px");
@@ -170,6 +170,18 @@ function setup() {
   colorPicker = createColorPicker("#FBF5F5");
   colorPicker.parent(row10);
   row10.parent(uiContainer);
+  
+  // Hàng cuối cùng: Ghi chú về cách sử dụng
+  let row11 = createDiv();
+  row11.style("font-size", "12px");
+  row11.style("color", "#333");
+  row11.html(
+    "- Nhập số electron vào ô \"Số electron:\" và bấm nút \"Play\" để chạy.<br>" +
+    "- Bấm giữ chuột trái để xoay orbital.<br>" +
+    "- Dùng con lăn chuột để phóng to/thu nhỏ.<br>" +
+    "© HÓA HỌC ABC"
+  );
+  row11.parent(uiContainer);
   
   // Tạo container canvas, căn bên phải container UI, với kích thước 600x600px.
   let canvasContainer = createDiv();
